@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --public-url goit-js-hw-11-timer",
+    "deploy": "gh-pages -d dist",
+"predeploy": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -17,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/andrii-telishko/goit-js-hw-11-timer/issues"
   },
-  "homepage": "https://github.com/andrii-telishko/goit-js-hw-11-timer#readme"
+  "homepage": "https://andrii-telishko.github.io/goit-js-hw-11-timer",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
 }

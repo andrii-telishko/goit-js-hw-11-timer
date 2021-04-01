@@ -5,6 +5,7 @@ class CountDown {
         this.onTick = onTick
         this.date = date
     }
+    
     getCountDown() {
         const targetDate = new Date(this.date)
 
@@ -12,13 +13,8 @@ class CountDown {
             const currentTime = Date.now();
             const time = targetDate - currentTime;
             const CountDown = this.getTimeComponents(time);
-              
             this.onTick(CountDown)
         }, 1000)
-    }
-
-    startTime() {
-         this.getCountDown()
     }
 
     getTimeComponents(time) {
@@ -29,9 +25,12 @@ class CountDown {
         return ({ days, hours, mins, secs })
     }
 
-
     pad(value) {
         return String(value).padStart(2, '0');
+    }
+
+    startTime() {
+         this.getCountDown()
     }
 }
 
